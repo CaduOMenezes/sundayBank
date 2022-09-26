@@ -157,7 +157,7 @@ public class Main {
                     System.out.println("De qual conta deseja operar? CC ou CP?");
                     contaDesejada = entradaDoUsuario.nextLine();
 
-                    if (titular.conta == null && Objects.equals(contaDesejada, "CC")) {
+                    if (titular.conta == null && Objects.equals(contaDesejada, "CC") || titular.cs == null && Objects.equals(contaDesejada, "CS") ) {
                         throw new RuntimeException("Conta inexistente");
                     }
 

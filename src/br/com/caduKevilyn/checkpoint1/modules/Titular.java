@@ -10,6 +10,7 @@ public class Titular {
 
     public Conta conta;
     public Conta cp;
+    public Conta cs;
     //Determinando os objetos da classe
     private String nome;
     private String sobrenome;
@@ -50,8 +51,11 @@ public class Titular {
             this.conta = new ContaCorrente(numeroConta, numeroAgencia, saldo, "Corrente", titular, chequeEspecial);
             this.cp = new ContaPoupanca(numeroConta+5000000, numeroAgencia, 0, "Poupanca", titular);
 
+        }else if(Objects.equals(tipoConta, "Salario")){
+            this.cs = new ContaSalario(numeroConta+33000000, numeroAgencia, saldo, "Salario", titular);
+
         }
-        }
+    }
 
 
 
